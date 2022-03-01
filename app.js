@@ -7,21 +7,27 @@
 // the number of seconds
 
 function convertToSeconds(minutes) {
-    if (minutes * 60 === 600) {
-        return true;
-    } 
+    if (minutes * 60) {
+        return 600;
+} else if (minutes * 60 < 600) {
+    return false;
+} else if (minutes * 60 > 600) {
+    return false;
 }
 
+}
 console.log(`convertToSeconds(10) === 600 : ${convertToSeconds(10) === 600}`);
 
 // 2. areaOfTriangle
 // Write a function called areaOfTriangle that takes in the base and height
 // of a triangle and returns its area
 function areaOfTriangle(base, height) {
-    if (base * height < 25) {
+    if (base * height) {
+        return 25;
+    } else if (base * height > 25){
         return false;
-    } else if (base * height === 25) {
-        return true;
+    } else if (base * height < 25) {
+        return false;
     }
 } 
 
@@ -80,6 +86,8 @@ function daysInMonth(number) {
         return 31;
     } else if (number === 11) {
         return 30;
+    } else if (number === 1) {
+        return 31;
     }
 }
 console.log(`daysInMonth(2) === 29: ${daysInMonth(2) === 29}`);
