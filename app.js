@@ -9,11 +9,11 @@
 function convertToSeconds(minutes) {
     if (minutes * 60) {
         return 600;
-} else if (minutes * 60 < 600) {
-    return false;
-} else if (minutes * 60 > 600) {
-    return false;
-}
+    } else if (minutes * 60 < 600) {
+        return false;
+    } else if (minutes * 60 > 600) {
+        return false;
+    }
 
 }
 console.log(`convertToSeconds(10) === 600 : ${convertToSeconds(10) === 600}`);
